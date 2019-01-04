@@ -1,0 +1,29 @@
+{
+  "name": "nlp-isa",
+  "version": "1.0.0",
+  "description": "web site of NLP lab in FRC CSC RAS",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randomunrandom/nlp-isa.git"
+  },
+  "author": "Danil Kireev <danilunrandom@gmail.com> (https://github.com/randomunrandom)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/randomunrandom/nlp-isa/issues"
+  },
+  "homepage": "https://github.com/randomunrandom/nlp-isa#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "finalhandler": "^1.1.1",
+    "gen-uid": "0.0.2",
+    "http": "0.0.0",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "popper.js": "^1.14.6",
+    "serve-static": "^1.13.2"
+  }
+}
