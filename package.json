@@ -18,6 +18,9 @@
   "homepage": "https://github.com/randomunrandom/nlp-isa#readme",
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "datatables.net": "^1.10.19",
+    "datatables.net-bs4": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
     "finalhandler": "^1.1.1",
     "gen-uid": "0.0.2",
     "http": "0.0.0",

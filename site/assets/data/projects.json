@@ -1,0 +1,19 @@
+{ "data": [ {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    }, {
+      "name": "name2",
+      "icon": "icon2",
+      "short_description": "desc2",
+      "description": "description2",
+      "demo": "demo2",
+      "datasets": "корпуса2",
+      "publications": "pdf2"
+    }
+  ]
+}
