@@ -1,4 +1,6 @@
-{ "data": [ {
+{
+  "data": {
+    "proj1": {
       "name": "name1",
       "icon": "icon1",
       "short_description": "desc1",
@@ -6,7 +8,8 @@
       "demo": "demo1",
       "datasets": "корпуса1",
       "publications": "pdf1"
-    }, {
+    },
+    "proj2": {
       "name": "name2",
       "icon": "icon2",
       "short_description": "desc2",
@@ -15,5 +18,5 @@
       "datasets": "корпуса2",
       "publications": "pdf2"
     }
-  ]
+  }
 }
