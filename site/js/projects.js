@@ -14,7 +14,7 @@
         "<'row' <'col-sm-11'tr> >" +
         "<'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7'p>>",
       data: data_list,
-      pageLength: 50,
+      pageLength: 25,
       columns: [
         {"data": "icon"},
         {"data": "name"},
