@@ -1,0 +1,7 @@
+[package]
+name = "nlp-isa"
+version = "0.1.0"
+authors = ["randomunrandom <randomunrandom@yandex.ru>"]
+edition = "2018"
+
+[dependencies]
