@@ -5,7 +5,7 @@
 
 @media (min-width: 980px) {
   #mainNav {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
