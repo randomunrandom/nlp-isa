@@ -9,10 +9,9 @@
       data_list.push(new_dict);
     } );
     $('#main_table').DataTable( {
-      dom: //"tpr",
-        // "<'col-sm-12 col-md-6'f>" +
-        "<'col-sm-12'tr>" +
-        "<'col-sm-12 col-md-6'p>",
+      dom:
+        "<'row' <'col-sm-11'tr> >" +
+        "<'row'<'col-sm-12 col-md-5'><'col-sm-12 col-md-7'p>>",
       data: data_list,
       columns: [
         {"data": "icon"},

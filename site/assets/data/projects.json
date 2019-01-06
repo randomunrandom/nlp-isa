@@ -10,6 +10,88 @@
       "publications": "pdf1"
     },
     "proj2": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj3": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj4": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj5": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj6": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj7": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj8": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj9": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+    "proj10": {
+      "name": "name1",
+      "icon": "icon1",
+      "short_description": "desc1",
+      "description": "description1",
+      "demo": "demo1",
+      "datasets": "корпуса1",
+      "publications": "pdf1"
+    },
+
+    "proj11": {
       "name": "name2",
       "icon": "icon2",
       "short_description": "desc2",
