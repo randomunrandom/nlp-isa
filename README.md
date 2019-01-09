@@ -4,7 +4,7 @@
 ##
 ### Requirements:
 ⋅ [node.js](https://nodejs.org/en/)\
-⋅ [rustup]()
+⋅ [rustup](https://rustup.rs/)
 
 ##
 ### Dependencies:
