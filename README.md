@@ -4,6 +4,7 @@
 ##
 ### Requirements:
 ⋅ [node.js](https://nodejs.org/en/)
+⋅ [rustup]()
 
 ##
 ### Dependencies:
