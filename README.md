@@ -1,5 +1,5 @@
 ## [nlp.isa.ru]()
-`status icons go here`
+[![Build Status](https://travis-ci.com/randomunrandom/nlp-isa.svg?branch=master)](https://travis-ci.com/randomunrandom/nlp-isa)
 
 ##
 ### Requirements:
