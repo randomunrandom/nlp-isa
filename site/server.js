@@ -4,8 +4,6 @@ const finalhandler = require('finalhandler'),
       http = require('http');
 
 const port = 8888;
-var   env = env || process.env;
-const user_lang = (env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE).split(".");
 
 const server = http.createServer((request, response) => {
   const req_id = uid.token(true).substr(0, 8);
