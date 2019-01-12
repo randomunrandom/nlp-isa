@@ -1,6 +1,8 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  console.log(window.location.href);
+
   let userLang = navigator.language || navigator.userLanguage;
   console.log(userLang.split('-')[0]);
   switch (userLang.split('-')[0]) {
@@ -11,7 +13,7 @@
       window.location.replace(window.location.href.replace("index", "ru/index"));
       break;
     default:
-      window.location.replace(window.location.href.replace("index", "ru/index"));
+      window.location.replace(window.location.replace("http://rexhaif.xyz/ru/index"));
       break;
   }
   
