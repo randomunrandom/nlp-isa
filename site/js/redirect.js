@@ -13,7 +13,7 @@
       window.location.replace(window.location.href.replace("index", "ru/index"));
       break;
     default:
-      window.location.replace(window.location.replace("http://rexhaif.xyz/ru/index"));
+      window.location.replace("http://rexhaif.xyz/ru/index");
       break;
   }
   
