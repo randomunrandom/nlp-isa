@@ -8,7 +8,7 @@ const port = 8888;
 const server = http.createServer((request, response) => {
   const req_id = uid.token(true).substr(0, 8);
   console.log(`[${new Date().toJSON().replace("T", " ").replace("Z", "")} - ${req_id}] ${request.method} ${request.url}`);
-  const serve = serveStatic("./");
+  const serve = serveStatic("./site/");
   const done = finalhandler(request, response);
   serve(request, response, () => {
     console.log(`[${new Date().toJSON().replace("T", " ").replace("Z", "")} - ${req_id}] ${response.statusCode} ${http.STATUS_CODES[response.statusCode]}`);
@@ -17,6 +17,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port,() => {
-  console.log(`user's system language is ${user_lang[0]}`);
   console.log(`[${new Date().toJSON().replace("T", " ").replace("Z", "")}] Server is running`);
 });

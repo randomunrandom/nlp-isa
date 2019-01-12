@@ -2,10 +2,3 @@
   background-color: #212529;
   color: #ffffff;
 }
-
-@media (min-width: 980px) {
-  #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
