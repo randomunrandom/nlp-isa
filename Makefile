@@ -4,6 +4,12 @@ DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
 all:
 	@echo "!"
 
+npm_install:
+	cd site && npm install
+start_server:
+	node site/server.js
+deploy_server: npm_install start_server
+
 docker_build:
 	docker build --build-arg port=$(DOCKER_PORT) -t nlp-isa .
 docker_rm_old:
@@ -18,10 +24,10 @@ docker: docker_build docker_rm_old docker_run
 
 test:
 	@echo test
-npm_install:
-	cd site && npm install
-start_server:
-	node site/server.js
-git_pull:
-	@echo update
-deploy: test git_pull npm_install start_server
+travis_push:
+	@echo travis
+#	git push
+ssh:
+	@echo ssh
+#	ssh "make docker"
+deploy: test travis_push ssh

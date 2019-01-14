@@ -3,4 +3,4 @@ ARG port
 WORKDIR /web
 EXPOSE $port
 RUN apt install make
-CMD ["make","deploy"]
+CMD ["make","deploy_server"]
