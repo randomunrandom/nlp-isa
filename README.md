@@ -1,4 +1,4 @@
-# [nlp.isa.ru](http://nlp-isa.rexhaif.xyz) [![License](https://img.shields.io/github/license/randomunrandom/nlp-isa.svg)](https://github.com/randomunrandom/nlp-isa/blob/master/LICENSE)
+# [nlp.isa.ru](http://nlp-isa.rexhaif.xyz) [![License](https://img.shields.io/github/license/randomunrandom/nlp-isa.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.com/randomunrandom/nlp-isa.svg?branch=master)](https://travis-ci.com/randomunrandom/nlp-isa)
 
 ##
