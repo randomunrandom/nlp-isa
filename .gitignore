@@ -1,6 +1,6 @@
 /.idea
 /site/node_modules
-
+/CI/travis_to_server
 
 /target
 **/*.rs.bk

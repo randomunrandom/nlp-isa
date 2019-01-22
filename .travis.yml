@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - node
+
+cache: npm
+
+install:
+  - make install_dep
+
+script:
+  - make test
+  - make start_server
+
+before_deploy:
+  - eval $(exec ssh-agent)
+
+deploy:
+  - provider: script
+    script: make deploy
