@@ -1,6 +1,5 @@
 FROM node
-ARG port
 WORKDIR /web
-EXPOSE $port
+EXPOSE 8888
 RUN apt install make
 CMD ["make","deploy_server"]

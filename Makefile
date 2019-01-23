@@ -1,37 +1,50 @@
 DEPLOY_HOME=/home/$(DEPLOY_USER)
 DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
 
-add_remote:
-	git remote add dev ssh://dev@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa
 
 all:
 	@echo "!"
 
 install_dep:
+	@echo "installing dependencies"
 	cd site && npm install
+	@echo "dependencies installed"
 start_server:
+	@echo "starting server"
 	node site/server.js
+	@echo "server has been stoped"
 deploy_server: install_dep start_server
 
 test:
-	@echo test
+	@echo "starting tests"
+	@echo "tests completed"
 
 docker_build:
-	docker build --build-arg port=$(DOCKER_PORT) -t nlp-isa .
+	@echo "building docker image"
+	docker build -t nlp-isa .
+	@echo "docker image has been built"
 docker_rm_old:
 	@echo "stoping & removing old docker container"
-	docker stop nlp-isa || true && docker rm nlp-isa || true
-	@echo "docker container removed"
+	docker stop nlp-isa || true
+	docker rm nlp-isa || true
+	@echo "docker container stopped and removed"
 docker_run:
 	@echo "deploying docker container"
-	docker run --restart=always --name nlp-isa -p $(DOCKER_PORT):$(DOCKER_PORT) -d -v `pwd`:/web nlp-isa
+	docker run -d --restart=always --name nlp-isa -v `pwd`:/web nlp-isa
 	@echo "docker container deployed"
 docker: docker_build docker_rm_old docker_run
 
+add_remote:
+	@echo "adding decrypted key"
+	ssh-add CI/travis_to_server
+	@echo "decrypted key added"
 push_to_server:
-	@echo travis
-#	git push
+	@echo "pusing to remote server"
+	git remote add dev ssh://$(SSH_USER)@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa
+	git push dev master
+	@echo "pushed to remote server"
 ssh:
-	@echo ssh
-#	ssh "make docker"
-deploy: push_to_server ssh
+	@echo "deploying on remote server"
+	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "make docker"
+	@echo "deployed"
+deploy: add_remote push_to_server ssh
