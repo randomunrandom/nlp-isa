@@ -13,14 +13,6 @@ deploy_server: install_dep start_server
 test:
 	@echo test
 
-push_to_server:
-	@echo travis
-#	git push
-ssh:
-	@echo ssh
-#	ssh "make docker"
-deploy: push_to_server ssh
-
 docker_build:
 	docker build --build-arg port=$(DOCKER_PORT) -t nlp-isa .
 docker_rm_old:
@@ -32,3 +24,11 @@ docker_run:
 	docker run --restart=always --name nlp-isa -p $(DOCKER_PORT):$(DOCKER_PORT) -d -v `pwd`:/web nlp-isa
 	@echo "docker container deployed"
 docker: docker_build docker_rm_old docker_run
+
+push_to_server:
+	@echo travis
+#	git push
+ssh:
+	@echo ssh
+#	ssh "make docker"
+deploy: push_to_server ssh
