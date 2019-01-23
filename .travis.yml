@@ -9,7 +9,7 @@ install:
 
 script:
   - make test
-  - make start_server
+#  - make start_server
 
 before_deploy:
   - eval $(exec ssh-agent)
