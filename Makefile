@@ -36,6 +36,7 @@ docker: docker_build docker_rm_old docker_run
 
 add_remote:
 	@echo "adding decrypted key"
+	ls CI/
 	ssh-add CI/travis_to_server
 	@echo "decrypted key added"
 push_to_server:
