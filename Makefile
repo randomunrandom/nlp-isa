@@ -36,7 +36,7 @@ docker: docker_build docker_rm_old docker_run
 
 push_to_server:
 	@echo "pusing to remote server"
-	ssh -o StrictHostKeyChecking=no -p $(SSH_PORT) $(SSH_USER)@rexhaif.isa.ru
+	ssh -o StrictHostKeyChecking=no
 	git remote add dev ssh://$(SSH_USER)@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa || true
 	git push dev master
 	@echo "pushed to remote server"
