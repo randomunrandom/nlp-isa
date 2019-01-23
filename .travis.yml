@@ -12,4 +12,4 @@ before_deploy:
 - eval $(exec ssh-agent)
 deploy:
 - provider: script
-  script: make docker
+  script: make deploy
