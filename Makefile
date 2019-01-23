@@ -36,13 +36,12 @@ docker: docker_build docker_rm_old docker_run
 
 push_to_server:
 	@echo "pusing to remote server"
-	git remote add dev ssh://$(SSH_USER)@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa
+	git remote add dev ssh://$(SSH_USER)@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa || true
 	git push dev master
 	@echo "pushed to remote server"
 ssh:
 	@echo "deploying on remote server"
-	@echo $(SERVER_PUB_KEY_1) > ~/.ssh/known_hosts
-	@echo $(SERVER_PUB_KEY_2) >> ~/.ssh/known_hosts
-	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "make docker"
+	ssh -o StrictHostKeyChecking=no -p $(SSH_PORT) $(SSH_USER)@rexhaif.isa.ru
+	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "cd projects/nlp-isa && make docker"
 	@echo "deployed"
 deploy: push_to_server ssh
