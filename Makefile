@@ -34,11 +34,6 @@ docker_run:
 	@echo "docker container deployed"
 docker: docker_build docker_rm_old docker_run
 
-add_remote:
-	@echo "adding decrypted key"
-	ls CI/
-	ssh-add CI/travis_to_server
-	@echo "decrypted key added"
 push_to_server:
 	@echo "pusing to remote server"
 	git remote add dev ssh://$(SSH_USER)@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa
@@ -48,4 +43,4 @@ ssh:
 	@echo "deploying on remote server"
 	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "make docker"
 	@echo "deployed"
-deploy: add_remote push_to_server ssh
+deploy: push_to_server ssh
