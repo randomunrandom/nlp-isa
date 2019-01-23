@@ -1,6 +1,9 @@
 DEPLOY_HOME=/home/$(DEPLOY_USER)
 DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
 
+add_remote:
+	git remote add dev ssh://dev@rexhaif.isa.ru:$(SSH_PORT)/home/dev/projects/nlp-isa
+
 all:
 	@echo "!"
 
