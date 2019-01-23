@@ -42,6 +42,6 @@ push_to_server:
 	@echo "pushed to remote server"
 ssh:
 	@echo "deploying on remote server"
-	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "cd projects/nlp-isa && make docker"
+	ssh -o StrictHostKeyChecking=no -p $(SSH_PORT) $(SSH_USER)@rexhaif.isa.ru "cd projects/nlp-isa && make docker"
 	@echo "deployed"
 deploy: push_to_server ssh
