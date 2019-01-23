@@ -10,6 +10,7 @@ before_deploy:
 - openssl aes-256-cbc -K $encrypted_8a47e2a0718b_key -iv $encrypted_8a47e2a0718b_iv
   -in CI/travis_to_server.enc -out CI/travis_to_server -d
 - eval $(exec ssh-agent)
+- chmod 600 CI/travis_to_server
 - ssh-add CI/travis_to_server
 deploy:
 - provider: script
