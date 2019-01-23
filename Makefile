@@ -41,7 +41,7 @@ push_to_server:
 	@echo "pushed to remote server"
 ssh:
 	@echo "deploying on remote server"
-	ssh-keyscan -p $(SSH_PORT) rexhaif.isa.ru >> ~/.ssh/known_hosts
-	"yes" | ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "make docker"
+	@echo $(SERVER_PUB_KEY) >> ~/.ssh/known_hosts
+	ssh $(SSH_USER)@rexhaif.xyz -p $(SSH_PORT) "make docker"
 	@echo "deployed"
 deploy: push_to_server ssh
