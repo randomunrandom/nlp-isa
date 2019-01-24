@@ -18,7 +18,7 @@
         window.location.replace( path.replace('index', 'ru/index'));
       }
       else {
-        window.location.replace( path + "ru/index.html");
+        window.location.replace( path + "ru/index");
       }
       break;
     default:
@@ -26,7 +26,7 @@
         window.location.replace( path.replace('index', 'ru/index'));
       }
       else {
-        window.location.replace( path + "ru/index.html");
+        window.location.replace( path + "ru/index");
       }
       break;
   }

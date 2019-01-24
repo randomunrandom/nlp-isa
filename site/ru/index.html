@@ -20,20 +20,19 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">NLP lab in FRC CSC RAS</a>
       <button class="btn navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="btn text-center" style="font-size: 18px; padding: 0;">
-          Меню
           <span class="navbar-toggler-icon align-top"></span>
         </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#demo">Демо&#160;инструментов</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#projects">Проекты</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#datasets">Корпуса</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#demo">Демо&#160;инструментов</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contacts">Контакты</a>
@@ -42,7 +41,10 @@
             <a class="nav-link js-scroll-trigger" href="#publications">Публикации</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../en/index.html">EN</a>
+            <a class="nav-link js-scroll-trigger" href="#people">Люди</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="../en/index">EN</a>
           </li>
         </ul>
       </div>
@@ -78,6 +80,22 @@
     </div>
   </header>
 
+  <!-- Demo -->
+  <section id="demo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Демо инструментов</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md">
+          <a class="btn btn-primary" href="./demo">Страница демо инструментов</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects -->
   <section id="projects">
     <div class="container">
@@ -88,7 +106,7 @@
       </div>
       <div class="row text-center">
         <div class="col-md">
-          <a class="btn btn-primary" href="./projects.html">Страница проектов</a>
+          <a class="btn btn-primary" href="./projects">Страница проектов</a>
         </div>
       </div>
     </div>
@@ -103,36 +121,20 @@
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-9">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
-        </div>
-        <div class="col-md-3">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
+        <div class="col-md">
+          <a class="btn btn-primary" href="./datasets">Страница корпусов</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Demo -->
-  <section id="demo">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Демо инструментов</h2>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-9">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
-        </div>
-        <div class="col-md-3">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
-        </div>
-      </div>
+      <!--<div class="row text-center">-->
+        <!--<div class="col-md-9">-->
+          <!--<h4 class="service-heading"></h4>-->
+          <!--<p class="text-muted text-left"></p>-->
+        <!--</div>-->
+        <!--<div class="col-md-3">-->
+          <!--<h4 class="service-heading"></h4>-->
+          <!--<p class="text-muted text-left"></p>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
   </section>
 
@@ -144,13 +146,24 @@
           <h2 class="section-heading text-uppercase">Контакты</h2>
         </div>
       </div>
-      <div class="text-center">
+      <div class="container text-center">
         <h4 class="service-heading">Наш адрес</h4>
-        <h5 class="text-muted text-left">117312, Москва, проспект 60-летия Октября, д. 9</h5>
+        <h5 class="text-left">117312, Москва, проспект 60-летия Октября, д. 9</h5>
       </div>
     </div>
-    <div id="map">
-      <!--Карта с отмеченой лабораторией<br> Если вы видите этот текст, карта не загрузилась или загрузилась неправильно<br> Пожалуйста, подождите и если она не загрузится - <br> перезагрузите страницу<br> Если карта не загружается после нескольких попыток - обратитесь к администратору-->
+    <div class="row text-center">
+      <div class="col-md-1"></div>
+      <div class="container col-md-7" id="map">
+        <!--Карта с отмеченой лабораторией<br> Если вы видите этот текст, карта не загрузилась или загрузилась неправильно<br> Пожалуйста, подождите и если она не загрузится - <br> перезагрузите страницу<br> Если карта не загружается после нескольких попыток - обратитесь к администратору-->
+      </div>
+      <div class="container col-md-4">
+        <h4 class="service-heading">Другие контакты:</h4>
+        <ul class="text-left">
+          <li>email: info@nlp.isa.ru
+          </li>
+          <li>телефон охраны: (?)</li>
+        </ul>
+      </div>
     </div>
     <div class="container">
       <h4 class="service-heading">Как проехать?</h4>
@@ -163,14 +176,6 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-4">
-      <h4 class="service-heading">Другие контакты:</h4>
-      <ul class="text-muted text-left">
-        <li>email: info@nlp.isa.ru
-        </li>
-        <li>телефон охраны: (?)</li>
-      </ul>
-    </div>
   </section>
 
   <!-- Publications -->
@@ -182,13 +187,24 @@
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-9">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
+        <div class="col-md">
+          <a class="btn btn-primary" href="./demo">Страница демо инструментов</a>
         </div>
-        <div class="col-md-3">
-          <h4 class="service-heading"></h4>
-          <p class="text-muted text-left"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- People -->
+  <section id="people">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Люди:</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md">
+          <a class="btn btn-primary" href="./people">Страница с людьми</a>
         </div>
       </div>
     </div>
