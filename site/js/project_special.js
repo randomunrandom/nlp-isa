@@ -7,6 +7,11 @@
   axios.get('../../assets/data/projects.json')
     .then(function (response) {
       let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
+      console.log(project_id in response['data']['data_' + lang]);
+      if (!(project_id in response['data']['data_' + lang])) {
+        let href = window.location.href;
+        window.location.replace('/' + lang + '/404');
+      }
       let data;
       let str_params = ['name', 'description'];
       let list_params = ['demo', 'datasets', 'publications'];
@@ -39,6 +44,7 @@
 
     })
     .catch(function (error) {
+      console.log(error);
       // window.location.href = window.location.href.replace('project', '404');
     });
 
