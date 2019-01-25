@@ -9,7 +9,7 @@
       let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
       if (!(project_id in response['data']['data_' + lang])) {
         let href = window.location.href;
-        window.location.replace('/' + lang + '/404');
+        window.location.href = '/' + lang + '/404';
       }
       let data;
       let str_params = ['name', 'description'];
