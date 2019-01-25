@@ -2,30 +2,29 @@
   "data_ru": {
     "nlp-isa": {
       "name": "Новый сайт",
-      "icon": "",
       "short_description": "Обновлённый сайт лаборатории",
-      "description": "я хз",
+      "description": "большое описание",
       "demo": [],
       "datasets": [],
       "publications": []
     },
-    "proj1": {
-      "name": "name1",
-      "icon": "icon1",
-      "short_description": "desc1",
-      "description": "description1",
-      "demo": ["demo1_1", "demo1_2"],
-      "datasets": ["корпуса1"],
-      "publications": ["pdf1"]
-    },
-    "proj2": {
-      "name": "name2",
-      "icon": "icon2",
-      "short_description": "desc2",
-      "description": "description2",
-      "demo": ["demo2"],
-      "datasets": ["корпуса2"],
-      "publications": ["pdf2_1", "pdf2_2"]
+    "example": {
+      "name": "Пример",
+      "short_description": "описание",
+      "description": "большое описание",
+      "demo": ["1", "2"],
+      "datasets": [],
+      "publications": ["1"]
+    }
+  },
+  "data_en": {
+    "nlp-isa": {
+      "name": "New site",
+      "short_description": "Renewed site",
+      "description": "bigger description",
+      "demo": [],
+      "datasets": [],
+      "publications": []
     }
   }
 }
