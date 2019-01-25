@@ -2,15 +2,15 @@
   "use strict";
   let project_id;
   // if (window.location.href.indexOf('?') >= 0) {
-    const url_params = new URLSearchParams(window.location.search);
-    project_id = url_params.get('project_id');
+  //   const url_params = new URLSearchParams(window.location.search);
+  //   project_id = url_params.get('project_id');
   // }
   // else {
-  //   const href_list = window.location.href.split('/');
-  //   project_id = href_list[href_list.length - 1];
+    const href_list = window.location.href.split('/');
+    project_id = href_list[href_list.length - 1];
   // }
   // console.log(project_id);
-  axios.get('../assets/data/projects.json')
+  axios.get('../../assets/data/projects.json')
     .then(function (response) {
       // console.log(response);
       let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
