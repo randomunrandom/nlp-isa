@@ -8,14 +8,14 @@
       Object.keys(response['data']['data_' + lang]).forEach(function(key) {
         data = response['data']['data_'+lang][key];
         $('#list').append('<li><div class="container">' +
-          '<h2 style="display: inline;">Навзание: </h2><h4 style="display: inline;">' + data['name'] + '</h4><br>' +
+          '<h2 style="display: inline;">Название: </h2><h4 style="display: inline;">' + data['name'] + '</h4><br>' +
           '<h3 style="display: inline;">' + data['short_description'] + '</h3><br>' +
           '<a class="btn btn-warning" href="' +
           window.location.href.replace("projects", "project") + '?project_id=' + key +
           '">Страница проекта</a></div></li>');
     } );
     })
-    .catch(function (error) {
+    .catch(function () {
       window.location.href = window.location.href.replace('projects', '404');
     });
 
