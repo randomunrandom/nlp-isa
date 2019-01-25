@@ -5,6 +5,9 @@ DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
 all:
 	@echo "!"
 
+update:
+	cd site && npm update
+
 install_dep:
 	@echo "installing dependencies"
 	cd site && npm install
