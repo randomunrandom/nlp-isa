@@ -10,13 +10,15 @@ const server = http.createServer((request, response) => {
   console.log(`[${new Date().toJSON().replace("T", " ").replace("Z", "")} - ${req_id}] ${request.method} ${request.url}`);
   const serve = serveStatic("./site/");
   if (request.url.indexOf('project/') >= 0) {
-    console.log('!');
-    request.url = request.url.slice(0, request.url.length - request.url.split('/')[request.url.split('/').length - 1].length);
-    console.log(request.url);
+    console.log('detected link to project/*');
+    let tmp_url = request.url.split('/');
+    tmp_url.pop();
+    request.url = tmp_url.join('/') + '/';
   }
   else if ((request.url.indexOf('.') < 0) && (request.url !== '/') && (request.url !== '/ru/') && (request.url !== '/en/')) {
+    console.log('detected link to file without extension');
     if (request.url.indexOf('?') < 0) {request.url = request.url + ".html";}
-    else {request.url = request.url.slice(0, request.url.indexOf('?'))+ ".html" + request.url.slice(request.url.indexOf('?'));}
+    else {request.url = request.url.slice(0, request.url.indexOf('?')) + ".html" + request.url.slice(request.url.indexOf('?'));}
   }
   // console.log("req = ", request.url);
   // console.log("response = ", response);

@@ -2,7 +2,7 @@
   "use strict";
 
   axios.get('../assets/data/projects.json')
-    .then(function (response) {
+    .then((response) => {
       let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
       let data;
       Object.keys(response['data']['data_' + lang]).forEach(function(key) {
@@ -16,8 +16,9 @@
           '">Страница проекта</a></div></li>');
     } );
     })
-    .catch(function () {
-      window.location.href = window.location.href.replace('projects', '404');
+    .catch(function (error) {
+      console.log(error);
+      // window.location.href = window.location.href.replace('projects', '404');
     });
 
 })(jQuery);
