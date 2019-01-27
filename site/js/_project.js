@@ -1,14 +1,12 @@
 (function($) {
   "use strict";
   let project_id;
-  const href_list = window.location.href.split('/');
-  project_id = href_list[href_list.length - 1];
-  // console.log(project_id);
+  const url_params = new URLSearchParams(window.location.search);
+  project_id = url_params.get('project_id');
 
-  axios.get('../../assets/data/projects.json')
+  axios.get('../assets/data/projects.json')
     .then((response) => {
       let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
-      console.log(project_id in response['data']['data_' + lang]);
       if (!(project_id in response['data']['data_' + lang])) {
         let href = window.location.href;
         window.location.href = '/' + lang + '/404';

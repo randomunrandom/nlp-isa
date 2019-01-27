@@ -1,0 +1,11 @@
+{
+  "data_ru": {
+    "example": {
+      "name": "Пример",
+      "short_description": "описание",
+      "description": "большое описание"
+    }
+  },
+  "data_en": {
+  }
+}
