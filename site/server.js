@@ -16,6 +16,34 @@ const server = http.createServer((request, response) => {
     request.url = tmp_url.join('/') + '/';
     console.log('\tredirecting to ', request.url);
   }
+  else if (request.url.indexOf('demo/') >= 0) {
+    console.log('detected link to demo/*');
+    let tmp_url = request.url.split('/');
+    tmp_url.pop();
+    request.url = tmp_url.join('/') + '/';
+    console.log('\tredirecting to ', request.url);
+  }
+  else if (request.url.indexOf('dataset/') >= 0) {
+    console.log('detected link to dataset/*');
+    let tmp_url = request.url.split('/');
+    tmp_url.pop();
+    request.url = tmp_url.join('/') + '/';
+    console.log('\tredirecting to ', request.url);
+  }
+  else if (request.url.indexOf('person/') >= 0) {
+    console.log('detected link to person/*');
+    let tmp_url = request.url.split('/');
+    tmp_url.pop();
+    request.url = tmp_url.join('/') + '/';
+    console.log('\tredirecting to ', request.url);
+  }
+  else if (request.url.indexOf('publication/') >= 0) {
+    console.log('detected link to publication/*');
+    let tmp_url = request.url.split('/');
+    tmp_url.pop();
+    request.url = tmp_url.join('/') + '/';
+    console.log('\tredirecting to ', request.url);
+  }
   else if ((request.url.indexOf('.') < 0) && (request.url !== '/') && (request.url !== '/ru/') && (request.url !== '/en/')) {
     console.log('detected link to file without extension');
     if (request.url.indexOf('?') < 0) {request.url = request.url + ".html";}

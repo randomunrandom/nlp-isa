@@ -12,7 +12,7 @@
           '<p class="text-justify">' + data['short_description'] + '</p>' +
           '<a class="btn btn-warning" href="' +
           // window.location.href.replace("projects", "project") + '?project_id=' + key +
-          window.location.href.replace("projects", "project") + '/' + key +
+          window.location.href.replace("/projects", "/project") + '/' + key +
           '">Страница проекта</a></div></li><hr>');
     } );
     })
