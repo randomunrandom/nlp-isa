@@ -30,6 +30,13 @@
           $('#' + key).hide();
         }
       });
+      data = response['data'][project_id]['link'];
+      if(data.length > 0) {
+        $('#link').append('<div class="container"><a class="btn-link" href="' + data + '">' + data +'</a></div>');
+      }
+      else {
+        $('#' + link).hide();
+      }
     })
     .catch((error) => {
       console.log(error);
