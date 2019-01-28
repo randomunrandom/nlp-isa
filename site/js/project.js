@@ -11,13 +11,20 @@
       if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
-      let data;
-      let str_params = ['name', 'description'];
+      let data = response['data'][project_id];
+      $('#name').html('<h4>' + data['name'] + '</h4>');
+      let replace_params = ['short_description'];
+      let str_params = ['description'];
       let list_params = ['demo', 'datasets', 'publications'];
+      replace_params.forEach((key) => {
+        data = response['data'][project_id][key];
+        console.log(data);
+        $('#' + key).html('<div class="container"><p class="text-justify">' + data + '</p></div>');
+      });
       str_params.forEach((key) => {
         data = response['data'][project_id][key];
         if (data.length > 0) {
-          $('#' + key).append('<div class="container"><p>' + data + '</p></div>');
+          $('#' + key).append('<div class="container"><p class="text-justify">' + data + '</p></div>');
         }
         else {
           $('#' + key).hide();
