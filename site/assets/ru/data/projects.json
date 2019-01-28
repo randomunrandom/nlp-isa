@@ -1,0 +1,18 @@
+{
+  "nlp-isa": {
+    "name": "Новый сайт",
+    "short_description": "Обновлённый сайт лаборатории",
+    "description": "большое описание",
+    "demo": [],
+    "datasets": [],
+    "publications": []
+  },
+  "example": {
+    "name": "Пример",
+    "short_description": "описание",
+    "description": "большое описание",
+    "demo": ["1", "2"],
+    "datasets": [],
+    "publications": ["1"]
+  }
+}
