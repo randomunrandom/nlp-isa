@@ -3,21 +3,19 @@
   let project_id;
   const href_list = window.location.href.split('/');
   project_id = href_list[href_list.length - 1];
-  // console.log(project_id);
+  console.log(project_id);
+  let lang = window.location.href.indexOf('/en/') >= 0 ? 'en' : 'ru';
 
-  axios.get('../../assets/data/projects.json')
+  axios.get('../../assets/' + lang + '/data/projects.json')
     .then((response) => {
-      let lang = window.location.href.indexOf('en') >= 0 ? 'en' : 'ru';
-      console.log(project_id in response['data']['data_' + lang]);
-      if (!(project_id in response['data']['data_' + lang])) {
-        let href = window.location.href;
+      if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
       let data;
       let str_params = ['name', 'description'];
       let list_params = ['demo', 'datasets', 'publications'];
       str_params.forEach((key) => {
-        data = response['data']['data_' + lang][project_id][key];
+        data = response['data'][project_id][key];
         if (data.length > 0) {
           $('#' + key).append('<div class="container"><p>' + data + '</p></div>');
         }
@@ -26,7 +24,7 @@
         }
       });
       list_params.forEach((key) => {
-        data = response['data']['data_' + lang][project_id][key];
+        data = response['data'][project_id][key];
         if (data.length === 1) {
           $('#' + key).append('<div class="container"><p>' + data + '</p></div>');
         }
