@@ -7,9 +7,9 @@ p {
   line-height: 1.75;
 }
 
-a {
+/* a {
   color: #212121;
-}
+} */
 
 a:hover {
   color: #ffa000;

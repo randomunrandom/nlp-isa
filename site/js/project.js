@@ -38,8 +38,8 @@
         }
         else if (data.length > 1) {
           let selected = $('#' + key);
-          selected.append('<ul>');
-          selected = selected.find('ul');
+          selected.append('<ol>');
+          selected = selected.find('ol');
           data.forEach((key_2) => {
             selected.append('<li>' + key_2 + '</li>');
           } );
