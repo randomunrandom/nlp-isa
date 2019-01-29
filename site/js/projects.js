@@ -5,7 +5,7 @@
   axios.get('../assets/' + lang + '/data/projects.json')
     .then((response) => {
       let options = {
-        valueNames: [ 'name', 'short_description', {name: 'link', attr:'href'}],
+        valueNames: [ 'name', 'short_description', {name: 'link', attr:'href'}, 'year'],
         page: 20,
         pagination: {
           innerWindow: 2,
@@ -21,6 +21,7 @@
         values.push(data);
       });
       let list = new List('projects_list', options, values);
+      list.sort('year', { order: "desc" });
       let style_pagination = function() {
         $('ul.pagination li').addClass('page-item');
         $('ul.pagination li a').addClass('page-link text-dark');

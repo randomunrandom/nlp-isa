@@ -14,6 +14,7 @@
       }
       let data = response['data'][project_id];
       $('#name').html('<h4>' + data['name'] + '</h4>');
+      $('#date').html('<p class="text-justify">Дата начала: ' + data['year'] + '</p>');
       let replace_params = ['short_description'];
       let str_params = ['description'];
       replace_params.forEach((key) => {

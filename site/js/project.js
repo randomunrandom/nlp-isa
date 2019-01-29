@@ -13,6 +13,7 @@
       }
       let data = response['data'][project_id];
       $('#name').html('<h4>' + data['name'] + '</h4>');
+      $('#date').html('<p class="text-justify">Дата начала: ' + data['year'] + '</p>');
       let replace_params = ['short_description'];
       let str_params = ['description'];
       let list_params = ['demo', 'datasets', 'publications'];

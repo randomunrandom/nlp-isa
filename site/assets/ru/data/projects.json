@@ -1,6 +1,7 @@
 {
   "nlp-isa": {
     "name": "Новый сайт",
+    "year": "2018",
     "short_description": "Обновлённый сайт лаборатории",
     "description": "большое описание",
     "demo": [],
@@ -9,6 +10,7 @@
   },
   "example": {
     "name": "Пример",
+    "year": "2000",
     "short_description": "описание",
     "description": "большое описание",
     "demo": ["1", "2"],

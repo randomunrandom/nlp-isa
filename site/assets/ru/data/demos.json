@@ -1,6 +1,7 @@
 {
   "example": {
     "name": "Пример",
+    "year": "2000",
     "short_description": "описание",
     "description": "большое описание",
     "link": "http://nlp-isa.rexhaif.xyz/ru/404"
