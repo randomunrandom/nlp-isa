@@ -52,14 +52,5 @@
     "demo": "",
     "datasets": "",
     "publications": ["Shelmanov A. O., Smirnov I. V., Vishneva E. A. Information extraction from clinical texts in Russian // Computational Linguistics and Intellectual Technologies: Papers from the Annual International Conference \"Dialogue\" (2015). Issue 14 (21). – 2015. – V1. – pp. 560-572. (<a href=\"http://www.dialog-21.ru/digests/dialog2015/materials/pdf/ShelmanovAOetal.full.pdf\" target=\"blank\">читать</a>)", "А.А.Баранов, Л.С. Намазова-Баранова, И.В. Смирнов, Д.А. Девяткин, А.О. Шелманов, Е.А. Вишнева, Е.В. Антонова, В.И. Смирнов, А.В. Латышев. Методы и средства комплексного интеллектуального анализа медицинских данных // Труды ИСА РАН. – 2015 – No2. – С. 81-93. (<a href=\"http://www.isa.ru/proceedings/images/documents/2015-65-2/t-15-2_81-93.pdf\" target=\"blank\">читать</a>)"]
-  },
-  "empty": {
-    "name": "",
-    "year": "",
-    "short_description": "",
-    "description": "",
-    "demo": "",
-    "datasets": "",
-    "publications": ""
   }
 }
