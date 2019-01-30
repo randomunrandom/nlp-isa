@@ -9,18 +9,15 @@
 ##
 # Dependencies:
 regular dependencies:   `make init`\
-developer dependencies: `.`
 
 ##
 # Updates:
-regular update: `.`\
-upgrade dependencies list: `.`\
-*NB* can break script
+regular update: `make update`\
 
 ##
 # Starting a server
-run server: `.`
+run server: `make deploy_server` (this instruction installs dependencies too)
 
 ##
 # Deploying a server with docker:
-deploy docker container: `.`
+deploy docker container: `make docker`

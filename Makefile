@@ -1,10 +1,6 @@
 DEPLOY_HOME=/home/$(DEPLOY_USER)
 DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
 
-
-all:
-	@echo "!"
-
 update:
 	cd site && npm update
 
