@@ -1,6 +1,7 @@
 /.idea
 /site/node_modules
 /CI/travis_to_server
+/site/libs/codemirror-5.43.0
 
 /target
 **/*.rs.bk

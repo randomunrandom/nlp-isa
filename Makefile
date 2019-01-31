@@ -6,6 +6,9 @@ update:
 
 install_dep:
 	@echo "installing dependencies"
+	@echo "unpacking libs"
+	cd site/libs && unzip -f codemirror.zip
+	@echo "libs unpacked"
 	cd site && npm install
 	@echo "dependencies installed"
 start_server:
