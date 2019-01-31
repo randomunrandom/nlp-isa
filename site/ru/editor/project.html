@@ -54,15 +54,28 @@
   <!-- Profect -->
   <section id="project">
     <div class="container">
+      <!--<form>-->
+        <!--<label>Название проекта: </label><input type="text">-->
+        <!--<label>Год начала разработки: </label><input type="text">-->
+        <!--<label>Короткое описание проекта: </label><textarea id="short_desc_editor"></textarea>-->
+        <!--<label>Полное описание проекта: </label><textarea id="description_editor"></textarea>-->
+        <!--<label>Разработанные демо: </label><textarea id="demos_editor"></textarea>-->
+        <!--<label>Используемые корпуса: </label><textarea id="datasets_editor"></textarea>-->
+        <!--<label>Опубликованые статьи: </label><textarea id="publications_editor"></textarea>-->
+        <!--<input type="submit" value="Submit">-->
+      <!--</form>-->
+
+
       <form>
-        <p>Название проекта: <input type="text"></p>
-        <p>Год начала разработки: <input type="text"></p>
-        <p>Короткое описание проекта:<textarea id="short_desc_editor"></textarea></p>
-        <p>Полное описание проекта:<textarea id="description_editor"></textarea></p>
-        <p>Разработанные демо:<textarea id="demos_editor"></textarea></p>
-        <p>Используемые корпуса:<textarea id="datasets_editor"></textarea></p>
-        <p>Опубликованые статьи:<textarea id="publications_editor"></textarea></p>
-        <input type="submit" value="Submit">
+        <div class="form-group">
+          <label for="input_name">Название проекта </label>
+          <input type="text" class="form-control" id="input_name" placeholder="Введите название">
+        </div>
+        <div class="form-group">
+          <label for="input_year">Год начала проекта </label>
+          <input type="text" class="form-control" id="input_year" placeholder="Введите год начала разработки">
+        </div>
+        <button type="submit" class="btn btn-primary">Подтвердить</button>
       </form>
     </div>
   </section>
@@ -98,9 +111,6 @@
   </footer>
 
   <!-- Optional JavaScript -->
-  <script src="../../libs/codemirror-5.43.0/lib/codemirror.js"></script>
-  <link rel="stylesheet" href="../../libs/codemirror-5.43.0/lib/codemirror.css">
-  <script src="../../libs/codemirror-5.43.0/mode/javascript/javascript.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -109,8 +119,10 @@
   <script src="../../node_modules/jquery.easing/jquery.easing.min.js"></script>
   <!-- Icons -->
   <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-  <!-- Open Street maps -->
-  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+  <script src="../../libs/codemirror-5.43.0/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="../../libs/codemirror-5.43.0/lib/codemirror.css">
+  <script src="../../libs/codemirror-5.43.0/mode/javascript/javascript.js"></script>
   <!-- Custom scripts -->
   <script src="../../js/script.js"></script>
   <script src="../../js/editor_project.js"></script>
