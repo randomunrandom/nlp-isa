@@ -22,6 +22,7 @@
     "finalhandler": "^1.1.1",
     "gen-uid": "0.0.2",
     "http": "0.0.0",
+    "jodit": "^3.2.34",
     "jquery": "^3.3.1",
     "jquery.easing": "^1.4.1",
     "list.js": "^1.5.0",

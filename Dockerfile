@@ -1,6 +1,5 @@
 FROM node
 WORKDIR /web
 EXPOSE 8888
-RUN apt-get update
-RUN apt-get install -y make unzip
+RUN apt-get install make
 CMD ["make","deploy_server"]
