@@ -66,14 +66,48 @@
       <!--</form>-->
 
 
-      <form>
-        <div class="form-group">
-          <label for="input_name">Название проекта </label>
-          <input type="text" class="form-control" id="input_name" placeholder="Введите название">
+      <form class="container" novalidate>
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-dark bg-warning" id="input_id_prepend">Уникальное название проекта</span>
+            </div>
+            <input type="text" class="form-control" id="input_id" aria-describedby="input_id_prepend" required>
+            <div class="invalid-tooltip">
+              Введите уникальное название проекта на английском
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="input_year">Год начала проекта </label>
-          <input type="text" class="form-control" id="input_year" placeholder="Введите год начала разработки">
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-dark bg-warning" id="input_name_prepend">Название проекта</span>
+            </div>
+            <input type="text" class="form-control" id="input_name" placeholder="Название" aria-describedby="input_name_prepend" required>
+            <div class="invalid-tooltip">
+              Введите корректное название
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-dark bg-warning" id="input_year_prepend">Год начала проекта</span>
+            </div>
+            <input type="text" class="form-control" id="input_year" placeholder="2019" aria-describedby="input_year_prepend" required>
+            <div class="invalid-tooltip">
+              Введите корректный год
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Короткое описание проекта</label>
+            <textarea class="form-control" id="input_short_desc" required rows="2" type="text"></textarea>
+            <div class="invalid-tooltip">
+              Введите корректное описание
+            </div>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary">Подтвердить</button>
       </form>
