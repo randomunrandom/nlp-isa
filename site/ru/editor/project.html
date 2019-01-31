@@ -9,6 +9,7 @@
   <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Text editor css -->
   <link rel="stylesheet" href="../../node_modules/jodit/build/jodit.min.css">
+  <link href="../../node_modules/quill/dist/quill.snow.css" rel="stylesheet">
   <!-- Custom stylesheet -->
   <link href="../../css/style.css" rel="stylesheet">
   <!-- <link rel="icon" href="../assets/icons/main_icon.png"> -->
@@ -74,7 +75,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text text-dark bg-warning" id="input_id_prepend">Уникальное название проекта</span>
             </div>
-            <input type="text" class="form-control" id="input_id" aria-describedby="input_id_prepend" required>
+            <input name="id" type="text" class="form-control" id="input_id" aria-describedby="input_id_prepend" required>
             <div class="invalid-tooltip">
               Введите уникальное название проекта на английском
             </div>
@@ -85,7 +86,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text text-dark bg-warning" id="input_name_prepend">Название проекта</span>
             </div>
-            <input type="text" class="form-control" id="input_name" placeholder="Название" aria-describedby="input_name_prepend" required>
+            <input name="name" type="text" class="form-control" id="input_name" placeholder="Название" aria-describedby="input_name_prepend" required>
             <div class="invalid-tooltip">
               Введите корректное название
             </div>
@@ -96,7 +97,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text text-dark bg-warning" id="input_year_prepend">Год начала проекта</span>
             </div>
-            <input type="text" class="form-control" id="input_year" placeholder="2019" aria-describedby="input_year_prepend" required>
+            <input name="year" type="text" class="form-control" id="input_year" placeholder="2019" aria-describedby="input_year_prepend" required>
             <div class="invalid-tooltip">
               Введите корректный год
             </div>
@@ -105,13 +106,14 @@
         <div class="mt-3 mb-3">
           <div class="form-group">
             <label for="input_short_desc">Короткое описание проекта</label>
-            <textarea class="form-control" id="input_short_desc" required rows="2" type="text"></textarea>
+            <input name="short_desc" type="hidden" required>
+            <div class="form-control" id="input_short_desc" type="text"></div>
             <div class="invalid-tooltip">
               Введите корректное описание
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" onclick="submit()">Подтвердить</button>
+        <button type="submit" class="btn btn-primary">Подтвердить</button>
       </form>
     </div>
   </section>
@@ -157,6 +159,7 @@
   <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
   <!-- Text editor -->
   <script src="../../node_modules/jodit/build/jodit.min.js"></script>
+  <script src="../../node_modules/quill/dist/quill.min.js"></script>
   <!-- Custom scripts -->
   <script src="../../js/script.js"></script>
   <script src="../../js/editor_project.js"></script>
