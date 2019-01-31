@@ -6,18 +6,18 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <!-- Bootstrap CSS -->
-  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom stylesheet -->
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
   <!-- <link rel="icon" href="../assets/icons/main_icon.png"> -->
-  <title>NLP lab in FRC CSC RAS/Проекты</title>
+  <title>NLP lab in FRC CSC RAS</title>
 </head>
 
 <body id="page-top">
   <!-- Navigation -->
-  <nav class="navbar navbar-shrink navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-shrink navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index">NLP lab in FRC CSC RAS</a>
+      <a class="navbar-brand js-scroll-trigger" href="index#page-top">NLP lab in FRC CSC RAS</a>
       <button class="btn navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="btn text-center" style="font-size: 18px; padding: 0;">
           <span class="navbar-toggler-icon align-top"></span>
@@ -29,7 +29,7 @@
             <a class="nav-link js-scroll-trigger" href="demos">Демо&#160;инструментов</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#page-top">Проекты</a>
+            <a class="nav-link js-scroll-trigger" href="projects">Проекты</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="datasets">Корпуса</a>
@@ -44,21 +44,26 @@
             <a class="nav-link js-scroll-trigger" href="people">Люди</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="../en/projects">EN</a>
+            <a class="nav-link js-scroll-trigger" href="../en/index">EN</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container" id="projects_list">
-      <div class="container">
-        <hr>
+  <!-- Profect -->
+  <section id="project">
+    <div class="container">
+      <div class="row">
+        <textarea id="editor"></textarea>
       </div>
-      <ul class="list"></ul>
-      <ul class="pagination" style="display: flex !important;justify-content: center !important;"></ul>
+
+
+
+
+      <div class="row">
+        <div
+      </div>
     </div>
   </section>
 
@@ -93,20 +98,22 @@
   </footer>
 
   <!-- Optional JavaScript -->
+  <script src="../../codemirror-5.43.0/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="../../codemirror-5.43.0/lib/codemirror.css">
+  <script src="../../codemirror-5.43.0/mode/javascript/javascript.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="../node_modules/list.js/dist/list.min.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Plugin JavaScript -->
-  <script src="../node_modules/jquery.easing/jquery.easing.min.js"></script>
-  <script src="../node_modules/axios/dist/axios.min.js"></script>
-  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>-->
+  <script src="../../node_modules/jquery.easing/jquery.easing.min.js"></script>
   <!-- Icons -->
   <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+  <!-- Open Street maps -->
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
   <!-- Custom scripts -->
-  <script src="../js/script.js"></script>
-  <script src="../js/projects.js"></script>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/projects_editor.js"></script>
 </body>
 
 </html>
