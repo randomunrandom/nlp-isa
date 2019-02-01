@@ -19,7 +19,7 @@ let publications_editor = new Quill('#input_publications', {
 });
 
 function on_submit() {
-  console.log('submited.');
+  // console.log('submited.');
   let input_id = document.forms['form_input']['input_id'].value;
   let input_name = document.forms['form_input']['input_name'].value;
   let input_year = document.forms['form_input']['input_year'].value;
