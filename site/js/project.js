@@ -11,44 +11,33 @@
       if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
-      let data = response['data'][project_id];
-      $('#name').html('<h4>' + data['name'] + '</h4>');
-      $('#date').html('<p class="text-justify">Дата начала: ' + data['year'] + '</p>');
-      let replace_params = ['short_description'];
-      let str_params = ['description'];
-      let list_params = ['demo', 'datasets', 'publications'];
-      replace_params.forEach((key) => {
+      let data;
+      let params = ['name', 'short_description', 'description', 'demos', 'datasets', 'publications'];
+      let to_append = ['year'];
+      params.forEach((key) => {
         data = response['data'][project_id][key];
-        console.log(data);
-        $('#' + key).html('<div class="container"><p class="text-justify">' + data + '</p></div>');
+        // console.log(data);
+        if (data.length > 0) {
+          if(key === 'name') {
+            $('#' + key + ' h3').html(data);
+          }
+          else {
+            $('#' + key + ' p').html(data);
+          }
+        }
+        else {
+          $('#' + key).hide();
+        }
       });
-      str_params.forEach((key) => {
+      to_append.forEach((key) => {
         data = response['data'][project_id][key];
         if (data.length > 0) {
-          $('#' + key).append('<div class="container"><p class="text-justify">' + data + '</p></div>');
+          $('#' + key + ' p').append(data);
         }
         else {
           $('#' + key).hide();
         }
       });
-      list_params.forEach((key) => {
-        data = response['data'][project_id][key];
-        if (data.length === 1) {
-          $('#' + key).append('<div class="container"><p>' + data + '</p></div>');
-        }
-        else if (data.length > 1) {
-          let selected = $('#' + key);
-          selected.append('<ol>');
-          selected = selected.find('ol');
-          data.forEach((key_2) => {
-            selected.append('<li>' + key_2 + '</li>');
-          } );
-        }
-        else {
-          $('#' + key).hide();
-        }
-      });
-
     })
     .catch((error) => {
       console.log(error);

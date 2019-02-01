@@ -54,22 +54,10 @@
     </div>
   </nav>
 
-  <!-- Profect -->
-  <section id="project">
+  <!-- Editor -->
+  <section id="editor">
     <div class="container">
-      <!--<form>-->
-        <!--<label>Название проекта: </label><input type="text">-->
-        <!--<label>Год начала разработки: </label><input type="text">-->
-        <!--<label>Короткое описание проекта: </label><textarea id="short_desc_editor"></textarea>-->
-        <!--<label>Полное описание проекта: </label><textarea id="description_editor"></textarea>-->
-        <!--<label>Разработанные демо: </label><textarea id="demos_editor"></textarea>-->
-        <!--<label>Используемые корпуса: </label><textarea id="datasets_editor"></textarea>-->
-        <!--<label>Опубликованые статьи: </label><textarea id="publications_editor"></textarea>-->
-        <!--<input type="submit" value="Submit">-->
-      <!--</form>-->
-
-
-      <form class="container" id="input_form" method="post">
+      <form id="form_input" method="post" novalidate>
           <div class="mb-3 input-group">
             <div class="input-group-prepend">
               <span class="input-group-text text-dark bg-warning" id="input_id_prepend">Уникальное название проекта</span>
@@ -97,24 +85,94 @@
               <!--Введите корректный год-->
             <!--</div>-->
           </div>
-        <!--<div class="mt-3 mb-3">-->
-          <!--<div class="form-group">-->
-            <!--<label for="input_short_desc">Короткое описание проекта</label>-->
+        <div class="mt-3 mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Короткое описание проекта</label>
             <!--<input id="input_short_desc" type="hidden" required>-->
-            <!--<div class="form-control" id="div_short_desc" type="text"></div>-->
+            <div class="form-control" id="input_short_desc" type="text"></div>
             <!--<div class="invalid-tooltip">-->
               <!--Введите корректное описание-->
             <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-        <!--<button type="submit" class="btn btn-primary text-dark" onclick="return submit()">Подтвердить</button>-->
-        <input type="submit" onclick="return on_submit()" value="Плдтвердить">
-
+          </div>
+        </div>
+        <div class="mt-3 mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Полное описание проекта</label>
+            <!--<input id="input_short_desc" type="hidden" required>-->
+            <div class="form-control" id="input_desc" type="text"></div>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное описание-->
+            <!--</div>-->
+          </div>
+        </div>
+        <div class="mt-3 mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Созданые корпуса</label>
+            <!--<input id="input_short_desc" type="hidden" required>-->
+            <div class="form-control" id="input_datasets" type="text"></div>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное описание-->
+            <!--</div>-->
+          </div>
+        </div>
+        <div class="mt-3 mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Демо созданых инструментов</label>
+            <!--<input id="input_short_desc" type="hidden" required>-->
+            <div class="form-control" id="input_demos" type="text"></div>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное описание-->
+            <!--</div>-->
+          </div>
+        </div>
+        <div class="mt-3 mb-3">
+          <div class="form-group">
+            <label for="input_short_desc">Опубликованные публикации</label>
+            <!--<input id="input_short_desc" type="hidden" required>-->
+            <div class="form-control" id="input_publications" type="text"></div>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное описание-->
+            <!--</div>-->
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary text-dark" onclick="return on_submit()">Подтвердить</button>
       </form>
-      <div class="container display-1" id="output"></div>
+    </div>
+    <div class="container" id="div_preview">
+      <div class="container row" id="id">
+        <h3>Идентификатор:</h3>
+      </div>
+      <div class="row container" id="name">
+        <h3>Название</h3>
+      </div>
+      <div class="row container" id="year">
+        <p class="text-left">Дата начала: </p>
+      </div>
+      <div class="row container" id="short_description">
+        <p class="text-left">короткое описание</p>
+      </div>
+      <div class="row container" id="description">
+        <h4>Описание:</h4>
+        <p class="text-left"></p>
+      </div>
+      <div class="row container" id="demos">
+        <h4>Демо:</h4>
+        <p class="text-left"></p>
+      </div>
+      <div class="row container" id="datasets">
+        <h4>Корпуса:</h4>
+        <p class="text-left"></p>
+      </div>
+      <div class="row container" id="publications">
+        <h4>Публикации:</h4>
+        <p class="text-left"></p>
+      </div>
+    </div>
+    <div class="container">
+      <h3>Полученные данные</h3>
+      <div id="div_display"></div>
     </div>
   </section>
-
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -150,6 +208,9 @@
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+
+  </script>
   <!-- Plugin JavaScript -->
   <script src="../../node_modules/jquery.easing/jquery.easing.min.js"></script>
   <!-- Icons -->
