@@ -15,7 +15,7 @@
   // };
 
 })(jQuery);
-function parse() {
+function on_submit() {
   console.log('submited.');
   let id = document.forms['input_form']['input_ip'].value;
   let name = document.forms['input_form']['input_name'].value;

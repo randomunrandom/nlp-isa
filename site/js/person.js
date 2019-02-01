@@ -14,7 +14,7 @@
       let data = response['data'][user_id];
       $('#name').html('<h4 class="card-text">' + data['name'] + '</h4>');
       console.log(data['photo']);
-      $('#photo').html('<img src="../../assets/imgs/photo/' + data['photo'] + '" alt="Фото" width="100%" height="100%">');
+      $('#photo').html('<img src="' + data['photo'] + '" alt="Фото" width="100%" height="100%">');
       let replace_params = ['short_description'];
       let str_params = ['description'];
       replace_params.forEach((key) => {

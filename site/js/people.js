@@ -5,14 +5,15 @@
   axios.get('../assets/' + lang + '/data/people.json')
     .then((response) => {
       let options = {
-        valueNames: [ 'name', 'short_description', {name: 'link', attr:'href'}, 'year'],
+        valueNames: [{name:'photo' , attr: 'src'}, 'name', 'short_description', {name: 'link', attr:'href'}],
         page: 20,
         pagination: {
           innerWindow: 2,
           outerWindow: 1,
         },
-        item: '<li><h4 class="name"></h4><p class="short_description text-left"></p>'
-          + '<a class="link btn btn-warning" href="">Страница человека</a><hr></li>'
+        item: '<li><div class="container row"><div class="col-md-2"><img class="photo" src="" alt="Фото" height="100%" width="100%"></div>'
+          + '<div class="col-md-10"><h4 class="name"></h4><p class="short_description text-left"></p>'
+          + '<a class="link btn btn-warning" href="">Страница человека</a></div></div><hr></li>'
       };
       let values = [];
       Object.keys(response['data']).forEach(function(key) {

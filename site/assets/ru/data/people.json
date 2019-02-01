@@ -1,6 +1,6 @@
 {
   "human": {
-    "photo": "test_image.png",
+    "photo": "../../assets/imgs/photo/test_image.png",
     "name": "Иванов Иван Иванович",
     "short_description": "Профессор ...",
     "description": "МНООООГО информации"
