@@ -69,52 +69,55 @@
       <!--</form>-->
 
 
-      <form class="container" novalidate>
-        <div class="mb-3">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text text-dark bg-warning" id="input_id_prepend">Уникальное название проекта</span>
-            </div>
-            <input name="id" type="text" class="form-control" id="input_id" aria-describedby="input_id_prepend" required>
-            <div class="invalid-tooltip">
-              Введите уникальное название проекта на английском
-            </div>
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text text-dark bg-warning" id="input_name_prepend">Название проекта</span>
-            </div>
-            <input name="name" type="text" class="form-control" id="input_name" placeholder="Название" aria-describedby="input_name_prepend" required>
-            <div class="invalid-tooltip">
-              Введите корректное название
-            </div>
-          </div>
-        </div>
-        <div class="mb-3">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text text-dark bg-warning" id="input_year_prepend">Год начала проекта</span>
-            </div>
-            <input name="year" type="text" class="form-control" id="input_year" placeholder="2019" aria-describedby="input_year_prepend" required>
-            <div class="invalid-tooltip">
-              Введите корректный год
-            </div>
-          </div>
-        </div>
-        <div class="mt-3 mb-3">
-          <div class="form-group">
-            <label for="input_short_desc">Короткое описание проекта</label>
-            <input name="short_desc" type="hidden" required>
-            <div class="form-control" id="input_short_desc" type="text"></div>
-            <div class="invalid-tooltip">
-              Введите корректное описание
-            </div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Подтвердить</button>
+      <form class="container" id="input_form" name="input_form" method="post" >
+        <!--<div class="mb-3">-->
+          <!--<div class="input-group">-->
+            <!--<div class="input-group-prepend">-->
+              <!--<span class="input-group-text text-dark bg-warning" id="input_id_prepend">Уникальное название проекта</span>-->
+            <!--</div>-->
+            <input type="text" class="form-control" id="input_id" name="input_id" placeholder="Идентификатор" aria-describedby="input_id_prepend" required>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите уникальное название проекта на английском-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mb-3">-->
+          <!--<div class="input-group">-->
+            <!--<div class="input-group-prepend">-->
+              <!--<span class="input-group-text text-dark bg-warning" id="input_name_prepend">Название проекта</span>-->
+            <!--</div>-->
+            <input type="text" class="form-control" id="input_name" placeholder="Название" aria-describedby="input_name_prepend" required>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное название-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mb-3">-->
+          <!--<div class="input-group">-->
+            <!--<div class="input-group-prepend">-->
+              <!--<span class="input-group-text text-dark bg-warning" id="input_year_prepend">Год начала проекта</span>-->
+            <!--</div>-->
+            <input type="text" class="form-control" id="input_year" placeholder="2019" aria-describedby="input_year_prepend" required>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректный год-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="mt-3 mb-3">-->
+          <!--<div class="form-group">-->
+            <!--<label for="input_short_desc">Короткое описание проекта</label>-->
+            <!--<input id="input_short_desc" type="hidden" required>-->
+            <div class="form-control" id="div_short_desc" type="text"></div>
+            <!--<div class="invalid-tooltip">-->
+              <!--Введите корректное описание-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-primary text-dark" onclick="return submit()">Подтвердить</button>-->
+        <input type="submit" onclick="return parse()" value="Плдтвердить">
+
       </form>
+      <div class="container display-1" id="output"></div>
     </div>
   </section>
 

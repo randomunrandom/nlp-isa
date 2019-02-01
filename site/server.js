@@ -3,7 +3,7 @@ const finalhandler = require('finalhandler'),
       uid = require('gen-uid'),
       http = require('http');
 
-const port = 8088;
+const port = 8888;
 
 const server = http.createServer((request, response) => {
   const req_id = uid.token(true).substr(0, 8);

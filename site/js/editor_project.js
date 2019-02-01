@@ -1,64 +1,28 @@
 (function($) {
-  // let short_desc_editor = new Jodit('#input_short_desc', {
-  //   useAceEditor: false
-    // buttons:[
-    //   'undo',
-    //   'redo',
-    //   '|',
-    //   'bold',
-    //   'strikethrough',
-    //   'underline',
-    //   'italic',
-    //   '|',
-    //   'superscript',
-    //   'subscript',
-    //   '|',
-    //   'ul',
-    //   'ol',
-    //   '|',
-    //   'align',
-    //   '|',
-    //   'outdent',
-    //   'indent',
-    //   '|',
-    //   'paragraph',
-    //   '|',
-    //   'image',
-    //   'table',
-    //   'link',
-    //   '\n',
-    //   'cut',
-    //   'hr',
-    //   'eraser',
-    //   'copyformat',
-    //   '|',
-    //   'symbol',
-    //   'fullsize',
-      // 'selectall',
-      // '|',
-      // 'source',
-      // '|',
-      // 'about',
-    // ],
-    // i18n: {
-    //   ru: {
-    //     'Type something': 'Начните что-либо вводить'
-    //   }
-    // }
-
-  // });
-
-
-  var short_desc_editor = new Quill('#input_short_desc', {
+  let short_desc_editor = new Quill('#div_short_desc', {
     theme: 'snow'
   });
 
+  // let form = document.querySelector('form');
+  // form.onsubmit = function() {
+  //   console.log("submited!");
+    // let short_desc = document.querySelector('#inpup_short_desc');
+    // let short_desc = JSON.stringify(short_desc_editor.root.innerHTML);
+  //   console.log("Submitted", $(form).serialize(), $(form).serializeArray());
+  //
+  //   let output = document.getElementById("output");
+  //   output.innerHTML =  id + '{\n\tshort_description:' + short_desc;
+  // };
 
-  let form = document.querySelector('form');
-  form.onsubmit = function() {
-    let short_desc = document.querySelector('input[name=short_desc]');
-    short_desc.value = JSON.stringify(short_desc_editor.root.innerHTML);
-    console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-
-  };
 })(jQuery);
+function parse() {
+  console.log('submited.');
+  let id = document.forms['input_form']['input_ip'].value;
+  let name = document.forms['input_form']['input_name'].value;
+  console.log(id + name);
+  // let  = document.forms["form"][""].value;
+  // alert(a+b)
+  let out = document.getElementById('output');
+  out.innerHTML='AAA';// + id + name;
+  return false;
+}
