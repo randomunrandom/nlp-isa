@@ -1,5 +1,5 @@
 (function($) {
-
+  // on_submit();
 })(jQuery);
 
 let short_desc_editor = new Quill('#input_short_desc', {
