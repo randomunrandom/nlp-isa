@@ -48,7 +48,11 @@ function on_submit() {
   let div_out = document.getElementById("div_display");
   div_out.innerHTML = '<xmp>' + JSON.stringify(out, null, 2) + '</xmp>';
 
-  $('#id h4').html(input_id);
+  if(inpu_id.lingth === 0) {
+    $('#id h4').html(input_id);
+  } else {
+    $('#id h4').hide();
+  }
   let data;
   let params = ['name', 'short_description', 'description', 'demos', 'datasets', 'publications'];
   let to_append = ['year'];
