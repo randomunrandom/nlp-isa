@@ -20,6 +20,7 @@ let publications_editor = new Quill('#input_publications', {
 
 function on_submit() {
   // console.log('submited.');
+  document.getElementById("div_preview").style.display = 'block';
   let input_id = document.forms['form_input']['input_id'].value;
   let input_name = document.forms['form_input']['input_name'].value;
   let input_year = document.forms['form_input']['input_year'].value;
@@ -47,7 +48,7 @@ function on_submit() {
   let div_out = document.getElementById("div_display");
   div_out.innerHTML = '<xmp>' + JSON.stringify(out, null, 2) + '</xmp>';
 
-  $('#id h3').append(input_id);
+  $('#id h4').html(input_id);
   let data;
   let params = ['name', 'short_description', 'description', 'demos', 'datasets', 'publications'];
   let to_append = ['year'];
@@ -57,12 +58,10 @@ function on_submit() {
     if (data.length > 0) {
       if(key === 'name') {
         $('#' + key + ' h3').html(data);
-      }
-      else {
+      } else {
         $('#' + key + ' p').html(data);
       }
-    }
-    else {
+    } else {
       $('#' + key).hide();
     }
   });
@@ -70,8 +69,7 @@ function on_submit() {
     data = out[input_id][key];
     if (data.length > 0) {
       $('#' + key + ' p').append(data);
-    }
-    else {
+    } else {
       $('#' + key).hide();
     }
   });
