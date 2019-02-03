@@ -6,7 +6,7 @@ update:
 
 install_dep:
 	@echo "installing dependencies"
-	cd site && npm install
+	cd site && npm install -D
 	@echo "dependencies installed"
 start_server:
 	@echo "starting server"
@@ -44,3 +44,6 @@ ssh:
 	ssh -o StrictHostKeyChecking=no -p $(SSH_PORT) $(SSH_USER)@rexhaif.isa.ru "cd projects/nlp-isa && make docker"
 	@echo "deployed"
 deploy: push_to_server ssh
+
+gulp:
+	cd site && gulp

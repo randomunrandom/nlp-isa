@@ -1,14 +1,13 @@
 (function($) {
   "use strict";
-  let project_id;
   const href_list = window.location.href.split('/');
-  project_id = href_list[href_list.length - 1];
-  console.log(project_id);
+  let project_id = href_list[href_list.length - 1];
+  // console.log(project_id);
   let lang = window.location.href.indexOf('/en/') >= 0 ? 'en' : 'ru';
 
   axios.get('../../assets/' + lang + '/data/datasets.json')
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
@@ -19,7 +18,7 @@
       let str_params = ['description'];
       replace_params.forEach((key) => {
         data = response['data'][project_id][key];
-        console.log(data);
+        // console.log(data);
         $('#' + key).html('<div class="container"><p class="text-justify">' + data + '</p></div>');
       });
       str_params.forEach((key) => {

@@ -8,7 +8,7 @@
 
 ##
 # Dependencies:
-regular dependencies:   `make init`\
+regular dependencies:   `make install_dep`\
 
 ##
 # Updates:
