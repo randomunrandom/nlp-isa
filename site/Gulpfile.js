@@ -20,5 +20,5 @@ function js() {
 }
 //
 exports.js = js;
-// exports.css = css;
+exports.css = css;
 exports.default = parallel(css, js);
