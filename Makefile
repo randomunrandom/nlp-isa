@@ -1,5 +1,6 @@
 DEPLOY_HOME=/home/$(DEPLOY_USER)
 DEPLOY_DIR=$(DEPLOY_HOME)/projects/$(PROJECT_NAME)
+gulp = ./node_modules/.bin/gulp
 
 update:
 	cd site && npm update
@@ -9,7 +10,7 @@ install_dep:
 	cd site && npm install -D
 	@echo "dependencies installed"
 gulp:
-	cd site && gulp
+	cd site && $(gulp)
 start_server:
 	@echo "starting server"
 	node site/server.js
