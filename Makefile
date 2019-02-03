@@ -8,11 +8,13 @@ install_dep:
 	@echo "installing dependencies"
 	cd site && npm install -D
 	@echo "dependencies installed"
+gulp:
+	cd site && gulp
 start_server:
 	@echo "starting server"
 	node site/server.js
 	@echo "server has been stoped"
-deploy_server: install_dep start_server
+deploy_server: install_dep gulp start_server
 
 test:
 	@echo "starting tests"
@@ -45,5 +47,4 @@ ssh:
 	@echo "deployed"
 deploy: push_to_server ssh
 
-gulp:
-	cd site && gulp
+
