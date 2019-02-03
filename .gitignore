@@ -2,6 +2,7 @@
 /site/node_modules
 /CI/travis_to_server
 /site/js/*.min.js
+/site/css/clean-*.css
 
 /target
 **/*.rs.bk
