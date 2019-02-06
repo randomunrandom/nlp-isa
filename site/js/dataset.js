@@ -11,32 +11,17 @@
       if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
-      let data = response['data'][project_id];
-      $('#name').html('<h4>' + data['name'] + '</h4>');
-      $('#date').html('<p class="text-justify">Дата начала: ' + data['year'] + '</p>');
-      let replace_params = ['short_description'];
-      let str_params = ['description'];
-      replace_params.forEach((key) => {
-        data = response['data'][project_id][key];
+      let params = ['name', 'short_description', 'description', 'year', 'link', 'footer'];
+      params.forEach((key) => {
+        // response['data'][project_id][key] = response['data'][project_id][key] || 0;
+        let data = response['data'][project_id][key] || '';
         // console.log(data);
-        $('#' + key).html('<div class="container"><p class="text-justify">' + data + '</p></div>');
-      });
-      str_params.forEach((key) => {
-        data = response['data'][project_id][key];
-        if (data.length > 0) {
-          $('#' + key).append('<div class="container"><p class="text-justify">' + data + '</p></div>');
-        }
-        else {
+         if (data.length > 0) {
+           $('#' + key + ' div:last-child').html(data);
+        } else {
           $('#' + key).hide();
         }
       });
-      data = response['data'][project_id]['link'];
-      if(data.length > 0) {
-        $('#link').append('<div class="container"><a class="btn-link" href="' + data + '">' + data +'</a></div>');
-      }
-      else {
-        $('#' + link).hide();
-      }
     })
     .catch((error) => {
       console.log(error);

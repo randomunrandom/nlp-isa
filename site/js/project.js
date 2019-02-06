@@ -8,33 +8,22 @@
 
   axios.get('../../assets/' + lang + '/data/projects.json')
     .then((response) => {
+      // console.log(response);
       if (!(project_id in response['data'])) {
         window.location.href = '/' + lang + '/404';
       }
-      let data;
-      let params = ['name', 'short_description', 'description', 'demos', 'datasets', 'publications'];
-      let to_append = ['year'];
+      let params = ['name', 'year', 'short_description', 'description', 'demos', 'datasets', 'publications', 'footer'];
       params.forEach((key) => {
-        data = response['data'][project_id][key];
+        // response['data'][project_id][key] = response['data'][project_id][key] || 0;
+        let data = response['data'][project_id][key] || '';
         // console.log(data);
-        if (data.length > 0) {
-          if(key === 'name') {
-            $('#' + key + ' h3').html(data);
+        if(data.length > 0) {
+          if(key === 'year') {
+            $('#' + key + ' div:last-child').html(' ' + data);
+            return;
           }
-          else {
-            $('#' + key + ' p').html(data);
-          }
-        }
-        else {
-          $('#' + key).hide();
-        }
-      });
-      to_append.forEach((key) => {
-        data = response['data'][project_id][key];
-        if (data.length > 0) {
-          $('#' + key + ' p').append(data);
-        }
-        else {
+          $('#' + key + ' div:last-child').html(data);
+        } else {
           $('#' + key).hide();
         }
       });
