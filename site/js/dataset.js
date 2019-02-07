@@ -25,7 +25,7 @@
     })
     .catch((error) => {
       console.log(error);
-      // window.location.href = window.location.href.replace('project', '404');
+      // window.location.href = window.location.href.replace('dataset', 'error');
     });
 
 })(jQuery);

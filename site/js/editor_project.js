@@ -47,11 +47,10 @@ function on_submit() {
   console.log(JSON.stringify(out));
   let div_out = document.getElementById("div_display");
   div_out.innerHTML = '<xmp>' + JSON.stringify(out, null, 2) + '</xmp>';
-
-  if(inpu_id.lingth === 0) {
-    $('#id h4').html(input_id);
+  if(input_id.length !== 0) {
+    $('#id h4#inp').html(input_id);
   } else {
-    $('#id h4').hide();
+    $('#id h4#inp').hide();
   }
   let data;
   let params = ['name', 'short_description', 'description', 'demos', 'datasets', 'publications'];
