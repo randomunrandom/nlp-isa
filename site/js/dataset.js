@@ -9,7 +9,7 @@
     .then((response) => {
       // console.log(response);
       if (!(project_id in response['data'])) {
-        window.location.href = '/' + lang + '/404';
+        window.location.href = window.location.href.replace('dataset', 'error');
       }
       let params = ['name', 'short_description', 'description', 'year', 'link', 'footer'];
       params.forEach((key) => {
@@ -24,8 +24,8 @@
       });
     })
     .catch((error) => {
-      console.log(error);
-      // window.location.href = window.location.href.replace('dataset', 'error');
+      // console.log(error);
+      window.location.href = window.location.href.replace('dataset', 'error');
     });
 
 })(jQuery);

@@ -22,7 +22,7 @@
       });
       let list = new List('datasets_list', options, values);
       list.sort('year', { order: "desc" });
-      let style_pagination = function() {
+      function style_pagination() {
         $('ul.pagination li').addClass('page-item');
         $('ul.pagination li a').addClass('page-link text-dark');
         $('ul.pagination li.active a').addClass('bg-warning border');
@@ -33,8 +33,8 @@
       });
     })
     .catch(function (error) {
-      console.log(error);
-      // window.location.href = window.location.href.replace('projects', '404');
+      // console.log(error);
+      window.location.href = window.location.href.replace('datasets', 'error');
     });
 
 })(jQuery);

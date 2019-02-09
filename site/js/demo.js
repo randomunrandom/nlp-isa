@@ -10,7 +10,7 @@
     .then((response) => {
       // console.log(response);
       if (!(project_id in response['data'])) {
-        window.location.href = '/' + lang + '/404';
+        window.location.href = window.location.href.replace('demo', 'error');
       }
       if (response['data'][project_id]['link'] === null) {
         window.location.href = window.location.href.replace('/demos', '/demo/') + project_id;
@@ -32,8 +32,8 @@
       });
     })
     .catch((error) => {
-      console.log(error);
-      // window.location.href = window.location.href.replace('demos', '404');
+      // console.log(error);
+      window.location.href = window.location.href.replace('demo', 'error');
     });
 
 })(jQuery);
