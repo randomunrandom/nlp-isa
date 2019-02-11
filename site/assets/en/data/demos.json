@@ -1,0 +1,8 @@
+{
+  "example": {
+    "name": "example",
+    "short_description": "description",
+    "description": "mooore information",
+    "link": "http://google.com"
+  }
+}

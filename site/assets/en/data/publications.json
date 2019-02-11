@@ -1,0 +1,9 @@
+{
+  "example": {
+    "name": "Example",
+    "year": "2000",
+    "short_description": "description",
+    "description": "moooore information",
+    "link": "https://google.com"
+  }
+}

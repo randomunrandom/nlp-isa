@@ -3,7 +3,7 @@
   let project_id;
   const href_list = window.location.href.split('/');
   project_id = href_list[href_list.length - 1];
-  console.log(project_id);
+  // console.log(project_id);
   let lang = window.location.href.indexOf('/en/') >= 0 ? 'en' : 'ru';
 
   axios.get('../../assets/' + lang + '/data/projects.json')
@@ -18,10 +18,6 @@
         let data = response['data'][project_id][key] || '';
         // console.log(data);
         if(data.length > 0) {
-          if(key === 'year') {
-            $('#' + key + ' div:last-child').html(' ' + data);
-            return;
-          }
           $('#' + key + ' div:last-child').html(data);
         } else {
           $('#' + key).hide();

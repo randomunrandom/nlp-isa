@@ -1,0 +1,12 @@
+{
+  "example": {
+    "name": "example",
+    "year": "2000",
+    "short_description": "description",
+    "description": "mooore information",
+    "publications": "publications",
+    "datasets":  "datasets",
+    "demos": "demos",
+    "footer": "some footer"
+  }
+}

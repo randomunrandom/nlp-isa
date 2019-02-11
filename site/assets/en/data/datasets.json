@@ -1,0 +1,10 @@
+{
+  "example": {
+    "name": "example",
+    "short_description": "short description",
+    "description": "mooore information",
+    "link": "link!",
+    "footer": "some footer"
+  }
+}
+
