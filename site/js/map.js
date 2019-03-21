@@ -7,9 +7,10 @@ let map_init = function() {
       // new OpenLayers.Control.LayerSwitcher({'ascending':false}),
       new OpenLayers.Control.ScaleLine(),
       new OpenLayers.Control.KeyboardDefaults()
-    ] });
+    ]
+  });
   let OSM = new OpenLayers.Layer.OSM("OpenStreetMap");
-  let lab = new OpenLayers.LonLat(37.579070, 55.698819).transform(
+  let lab = new OpenLayers.LonLat(37.57907, 55.698819).transform(
     new OpenLayers.Projection("EPSG:4326"),
     new OpenLayers.Projection("EPSG:900913")
   );
@@ -24,5 +25,4 @@ let map_init = function() {
 
   // load and display map
   map_init();
-
 })(jQuery); // End of use strict

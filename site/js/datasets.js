@@ -1,40 +1,47 @@
 (function($) {
   "use strict";
-  let lang = window.location.href.indexOf('/en/') >= 0 ? 'en' : 'ru';
+  let lang = window.location.href.indexOf("/en/") >= 0 ? "en" : "ru";
 
-  axios.get('../assets/' + lang + '/data/datasets.json')
-    .then((response) => {
+  axios
+    .get("../assets/" + lang + "/data/datasets.json")
+    .then(response => {
       let options = {
-        valueNames: [ 'name', 'short_description', {name: 'link', attr:'href'}, 'year'],
+        valueNames: [
+          "name",
+          "short_description",
+          { name: "link", attr: "href" },
+          "year"
+        ],
         page: 20,
         pagination: {
           innerWindow: 2,
-          outerWindow: 1,
+          outerWindow: 1
         },
-        item: '<li><h4 class="name"></h4><p class="short_description text-left"></p>'
-          + '<a class="link btn btn-warning" href="">Страница корпуса</a><hr></li>'
+        item:
+          '<li><h4 class="name"></h4><p class="short_description text-left"></p>' +
+          '<a class="link btn btn-warning" href="">Страница корпуса</a><hr></li>'
       };
       let values = [];
-      Object.keys(response['data']).forEach(function(key) {
-        let data = response['data'][key];
-        data['link'] = window.location.href.replace("/datasets", "/dataset/") + key;
+      Object.keys(response["data"]).forEach(function(key) {
+        let data = response["data"][key];
+        data["link"] =
+          window.location.href.replace("/datasets", "/dataset/") + key;
         values.push(data);
       });
-      let list = new List('datasets_list', options, values);
-      list.sort('year', { order: "desc" });
+      let list = new List("datasets_list", options, values);
+      list.sort("year", { order: "desc" });
       function style_pagination() {
-        $('ul.pagination li').addClass('page-item');
-        $('ul.pagination li a').addClass('page-link text-dark');
-        $('ul.pagination li.active a').addClass('bg-warning border');
-      };
+        $("ul.pagination li").addClass("page-item");
+        $("ul.pagination li a").addClass("page-link text-dark");
+        $("ul.pagination li.active a").addClass("bg-warning border");
+      }
       style_pagination();
-      $('ul.pagination').click(() => {
+      $("ul.pagination").click(() => {
         style_pagination();
       });
     })
-    .catch(function (error) {
+    .catch(function(error) {
       // console.log(error);
-      window.location.href = window.location.href.replace('datasets', 'error');
+      window.location.href = window.location.href.replace("datasets", "error");
     });
-
 })(jQuery);

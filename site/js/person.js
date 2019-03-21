@@ -1,40 +1,52 @@
-(function ($) {
+(function($) {
   "use strict";
-  const href_list = window.location.href.split('/');
+  const href_list = window.location.href.split("/");
   let user_id = href_list[href_list.length - 1];
   // console.log(user_id);
-  let lang = window.location.href.indexOf('/en/') >= 0 ? 'en' : 'ru';
+  let lang = window.location.href.indexOf("/en/") >= 0 ? "en" : "ru";
 
-  axios.get('../../assets/' + lang + '/data/people.json')
-    .then((response) => {
+  axios
+    .get("../../assets/" + lang + "/data/people.json")
+    .then(response => {
       // console.log(response);
-      if (!(user_id in response['data'])) {
-        window.location.href = '/' + lang + '/404';
+      if (!(user_id in response["data"])) {
+        window.location.href = "/" + lang + "/404";
       }
-      let data = response['data'][user_id];
-      $('#name').html('<h4 class="card-text">' + data['name'] + '</h4>');
-      console.log(data['photo']);
-      $('#photo_name').prepend('<img class="card-img-top" src="' + data['photo'] + '" alt="Фото" id="photo">');
+      let data = response["data"][user_id];
+      $("#name").html('<h4 class="card-text">' + data["name"] + "</h4>");
+      console.log(data["photo"]);
+      $("#photo_name").prepend(
+        '<img class="card-img-top" src="' +
+          data["photo"] +
+          '" alt="Фото" id="photo">'
+      );
 
-      let replace_params = ['short_description'];
-      let str_params = ['description'];
-      replace_params.forEach((key) => {
-        data = response['data'][user_id][key];
+      let replace_params = ["short_description"];
+      let str_params = ["description"];
+      replace_params.forEach(key => {
+        data = response["data"][user_id][key];
         // console.log(data);
-        $('#' + key).html('<div class="container"><p class="text-justify">' + data + '</p></div>');
+        $("#" + key).html(
+          '<div class="container"><p class="text-justify">' +
+            data +
+            "</p></div>"
+        );
       });
-      str_params.forEach((key) => {
-        data = response['data'][user_id][key];
+      str_params.forEach(key => {
+        data = response["data"][user_id][key];
         if (data.length > 0) {
-          $('#' + key).append('<div class="container"><p class="text-justify">' + data + '</p></div>');
+          $("#" + key).append(
+            '<div class="container"><p class="text-justify">' +
+              data +
+              "</p></div>"
+          );
         } else {
-          $('#' + key).hide();
+          $("#" + key).hide();
         }
       });
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error);
       // window.location.href = window.location.href.replace('project', '404');
     });
-
 })(jQuery);
